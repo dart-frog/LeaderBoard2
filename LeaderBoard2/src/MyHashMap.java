@@ -22,8 +22,11 @@ public class MyHashMap {
 		int bin = (key.length()*key.charAt(0)) % (myHashMap.length - 1);
 		KeyValuePairs x = new KeyValuePairs(key,value);
 		myHashMap[bin].add(x);
-		x.getValue();
 	}
+	public void reset(KeyValuePairs x){
+		
+	}
+	
 	/**
 	 * Returns the value of a given key
 	 * @param key is the value you are looking for 
@@ -57,6 +60,15 @@ public class MyHashMap {
 		}
 		return xList;
 		
+	}
+	public ArrayList<KeyValuePairs> getKeyValuePairs(){
+		ArrayList<KeyValuePairs> xList = new ArrayList<KeyValuePairs>();
+		for (int i = 0; i < myHashMap.length; i++){
+			for (int y = 0; y < myHashMap[i].size();y++){
+				xList.add(myHashMap[i].get(y));
+			}
+		}
+		return xList;
 	}
 	/**
 	 * Returns weather a certain key exists inside the hash map
