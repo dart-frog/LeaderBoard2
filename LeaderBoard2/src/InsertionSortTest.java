@@ -1,12 +1,11 @@
 import static org.junit.Assert.*;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 import org.junit.Test;
 
 
-public class BubbleSortTest {
+public class InsertionSortTest {
 
 	@Test
 	public void test() {
@@ -18,7 +17,7 @@ public class BubbleSortTest {
 		t.set("max", "10");
 		t.set("Roxy", "50987");
 		t.set("Steve", "190");
-		ArrayList<KeyValuePairs> x = (ArrayList<KeyValuePairs>) BubbleSort.sort(t.getKeyValuePairs());
+		ArrayList<KeyValuePairs> x = (ArrayList<KeyValuePairs>) InsertionSort.sort(t.getKeyValuePairs());
 		assertEquals("verify it can sort a list", "10", x.get(0).getValue());
 		assertEquals("verify it can sort high numbers", "50987", x.get(6).getValue()); 
 	}
