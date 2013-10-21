@@ -1,8 +1,18 @@
 import java.awt.List;
 import java.util.ArrayList;
 
+/**
+ * Uses the insertion sort method to arrange a list of key value pairs from lowest to highest based on thier value
+ * @author Steve
+ *
+ */
 
 public class InsertionSort {
+	/**
+	 * takes an arraylist of keyvaluepair pairs and spits out a sorted version 
+	 * @param xlist the unsorted array 
+	 * @return the sorted array
+	 */
 	public static ArrayList<KeyValuePairs> sort(ArrayList<KeyValuePairs> xlist){
 		for (int j = 1; j < xlist.size(); j++){
 			int i = j;
@@ -21,6 +31,11 @@ public class InsertionSort {
 		}
 		return xlist;
 	}
+	/**
+	 * takes a key Value Pair and spits out the value as an interger 
+	 * @param x the key value
+	 * @return the parsed value
+	 */
 	public static int translate(KeyValuePairs x){
 		String p = x.getValue();
 		int q = Integer.parseInt(p);
